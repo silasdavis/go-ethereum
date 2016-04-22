@@ -63,7 +63,7 @@ func (self *Vm) Run(contract *Contract, input []byte) (ret []byte, err error) {
 	)
 	if EnableJit {
 		// If the JIT is enabled check the status of the JIT program,
-		// if it doesn't exist compile a new program in a seperate
+		// if it doesn't exist compile a new program in a separate
 		// goroutine or wait for compilation to finish if the JIT is
 		// forced.
 		switch GetProgramStatus(codehash) {
